@@ -1,0 +1,4 @@
+# /robots.txt  
+User-agent: *
+Allow: /
+sirve para que el sitemap le facilite a los bot encontrar la pagina web

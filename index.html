@@ -1,128 +1,88 @@
 <!DOCTYPE html>
-<!-- Declaración del tipo de documento (HTML5), indica que el archivo es un documento HTML moderno -->
-
 <html lang="es">
-<!-- Inicio del documento HTML, con el atributo 'lang="es"' para indicar que el idioma principal es español -->
-
 <head>
-    <!-- Sección que contiene metadatos e información de configuración de la página -->
-
-    <meta charset="UTF-8">
-    <!-- Define la codificación de caracteres como UTF-8 para soportar caracteres especiales como tildes y ñ -->
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Configuración para hacer la página responsiva en dispositivos móviles, ajustando el ancho al tamaño de la pantalla -->
-
-    <title>Mi Portafolio</title>
-    <!-- Define el título de la pestaña del navegador -->
-
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- Enlace a una hoja de estilos CSS externa para aplicar diseño a la página -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio de Jorge Candia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
-    <!-- Cuerpo del documento, donde se encuentra todo el contenido visible de la página -->
+  <header>
+    <h1>Jorge Fermin Nathael Candia Seoulveda</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Sobre Mí</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <!-- Sección de encabezado de la página, generalmente contiene el nombre y la navegación principal -->
+  <main>
+    <section id="about" class="two-column">
+      <div class="left-column">
+        <h2>Sobre Mí</h2>
+        <p>Estudiante de Técnico Universitario en Informática en la UCT. Me apasionan los videojuegos, juegos de mesa y de cartas.</p>
+      </div>
+      <div class="right-column">
+        <img src="assets/img/yo.jpg" alt="Foto personal de Jorge Candia" width="250" height="250">
+      </div>
+    </section>
 
-        <h1>Jorge Fermin Nathael Candia Seoulveda</h1>
-        <!-- Título principal del portafolio que aparece en la parte superior de la página -->
+    <section id="projects" class="two-column">
+      <div class="left-column">
+        <h2>Proyectos</h2>
+        <article class="project">
+          <h3>Proyecto 1</h3>
+          <p>En proseso</p>
+        </article>
+        <article class="project">
+          <h3>Proyecto 2</h3>
+          <p>Proximamente</p>
+        </article>
+      </div>
+      <div class="right-column">
+        <h2>Habilidades</h2>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Visual Studio</li>
+        </ul>
+      </div>
+    </section>
 
-        <nav>
-            <!-- Menú de navegación que permite moverse entre secciones de la misma página -->
-            <ul>
-                <li><a href="#about">Sobre Mí</a></li>
-                <!-- Enlace a la sección "Sobre Mí" -->
-                <li><a href="#projects">Proyectos</a></li>
-                <!-- Enlace a la sección "Proyectos" -->
-                <li><a href="#contact">Contacto</a></li>
-                <!-- Enlace a la sección "Contacto" -->
-            </ul>
-        </nav>
-    </header>
+    <section id="contact" class="two-column">
+      <div class="left-column">
+        <h2>Formulario de Contacto</h2>
+        <form id="contactForm">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
 
-    <main>
-        <!-- Sección principal del contenido de la página -->
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required>
 
-        <section id="about" class="two-column">
-            <!-- Sección "Sobre Mí", identificada con el ID 'about' y la clase 'two-column' para darle formato -->
-            
-            <div class="left-column">
-                <!-- Columna izquierda dentro de la sección "Sobre Mí" -->
-                <h2>Sobre Mí</h2>
-                <!-- Subtítulo de la sección -->
-                <p>Estoy estudiando en la UCT, Técnico Universitario en Informática.
-                    Me gustan los videojuegos, los juegos de mesa y los juegos de cartas.</p>
-                <!-- Párrafo con información personal -->
-            </div>
-            
-            <div class="right-column">
-                <!-- Columna derecha dentro de la sección "Sobre Mí" -->
-                <img src="assets/img/yo.jpg" alt="foto personal" width="250" height="250">
-                <!-- Imagen personal con un tamaño de 250x250 píxeles y un texto alternativo -->
-            </div>
-        </section>
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" required></textarea>
 
-        <section id="projects" class="two-column">
-            <!-- Sección "Proyectos", identificada con el ID 'projects' y la clase 'two-column' -->
+          <button type="submit">Enviar</button>
+          <p id="formMessage" class="hidden"></p>
+        </form>
+      </div>
+      <div class="right-column">
+        <h2>Redes Sociales</h2>
+        <p><strong>YouTube:</strong> <a href="https://www.youtube.com/@factoroostroper" target="_blank">mi canal</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/agentemuerte/" target="_blank">mi perfil</a></p>
+      </div>
+    </section>
+  </main>
 
-            <div class="left-column">
-                <!-- Columna izquierda donde se listan los proyectos -->
-                <h2>Proyectos</h2>
-                <!-- Subtítulo de la sección -->
+  <footer>
+    <p>&copy; 2024 Jorge Candia Sepúlveda</p>
+  </footer>
 
-                <div class="project">
-                    <!-- Contenedor para un proyecto -->
-                    <h3>Proyecto 1</h3>
-                    <!-- Nombre del proyecto -->
-                    <p>Proyecto en proceso.</p>
-                    <!-- Breve descripción -->
-                </div>
-
-                <div class="project">
-                    <!-- Segundo proyecto -->
-                    <h3>Proyecto 2</h3>
-                    <p>Proyecto inexistente.</p>
-                    <!-- Descripción del proyecto -->
-                </div>
-            </div>
-
-            <div class="right-column">
-                <!-- Columna derecha con lista de habilidades -->
-                <h2>Habilidades</h2>
-                <p>HTML</p>
-                <p>Python</p>
-                <p>Visual Studio</p>
-                <!-- Listado de habilidades en formato de párrafos -->
-            </div>
-        </section>
-
-        <section id="contact" class="two-column">
-            <!-- Sección de contacto, identificada con el ID 'contact' y la clase 'two-column' -->
-
-            <div class="left-column">
-                <!-- Columna izquierda con información de contacto -->
-                <h2>Contacto</h2>
-                <p>Email: jcandia2024@alu.uct.cl</p>
-                <!-- Dirección de correo electrónico -->
-            </div>
-
-            <div class="right-column">
-                <!-- Columna derecha con enlaces a redes sociales -->
-                <h2>Redes Sociales</h2>
-                <p>Youtube: <a href="https://www.youtube.com/@factoroostroper">mi canal</a></p>
-                <!-- Enlace al canal de YouTube -->
-                <p>Instagram: <a href="https://www.instagram.com/agentemuerte/">mi instagram</a></p>
-                <!-- Enlace a Instagram -->
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <!-- Pie de página de la página web -->
-        <p>&copy; 2024 Jorge Candia Sepúlveda</p>
-        <!-- Texto de derechos de autor con el símbolo © y el año -->
-    </footer>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
